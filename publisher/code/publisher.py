@@ -62,3 +62,4 @@ if __name__ == "__main__":
     stream = Stream_tweet(twitter_config.CONSUMER_KEY, twitter_config.CONSUMER_SECRET,
                       twitter_config.ACCESS_TOKEN, twitter_config.ACCESS_TOKEN_SECRET)
     stream.filter(track=hash_tag_list)
+    
