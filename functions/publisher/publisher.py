@@ -8,11 +8,11 @@ from google.cloud import pubsub_v1
 import twitter_config
 
 
-credentials = "tweets_private_key.json"
+credentials = "gcp_private_key.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials
 
 publisher = pubsub_v1.PublisherClient()
-topic_path = "projects/learn-de-331908/topics/tweets"
+topic_path = "topic_path"
 
 
 class Stream_tweet(tweepy.Stream):
@@ -22,7 +22,7 @@ class Stream_tweet(tweepy.Stream):
         dt_og = dt.datetime.strptime(date_time, "%a %b %d %H:%M:%S %z %Y")
         hours_change = dt.timedelta(hours=7)
         thai_dt = dt_og + hours_change
-        real_dt = thai_dt.strftime("%Y-%m-%d %H:%M:%S")
+        real_dt = thai_dt.strftime("%Y-%m-%dT%H:%M:%S")
         return real_dt
     
     
