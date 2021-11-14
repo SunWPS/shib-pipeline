@@ -8,8 +8,6 @@ from concurrent.futures import TimeoutError
 ps_credentials = "gcp_private_key.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ps_credentials
 
-timeout = 5.0
-
 subscriber = pubsub_v1.SubscriberClient()
 subscription_path = "subscirption path"
 
