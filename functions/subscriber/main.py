@@ -34,9 +34,10 @@ def callback(message):
 streaming_pull = subscriber.subscribe(subscription_path, callback=callback)
 print("Listening for messages on " + subscription_path)
 
-with subscriber:
-    try:
-        streaming_pull.result() # add time out in the result(), if you want
-    except TimeoutError:
-        streaming_pull.cancel()
-        streaming_pull.result()
+def start_consume():
+    with subscriber:
+        try:
+            streaming_pull.result() # add time out in the result(), if you want
+        except TimeoutError:
+            streaming_pull.cancel()
+            streaming_pull.result()
