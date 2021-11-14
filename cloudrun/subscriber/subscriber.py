@@ -9,10 +9,10 @@ ps_credentials = "gcp_private_key.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ps_credentials
 
 subscriber = pubsub_v1.SubscriberClient()
-subscription_path = "subscirption path"
+subscription_path = "projects/learn-de-331908/subscriptions/tweets-sub"
 
 client = bigquery.Client()
-table_id = "table id"
+table_id = "learn-de-331908.shib.tweets"
 
 
 def callback(message):

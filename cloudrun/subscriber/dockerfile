@@ -1,0 +1,9 @@
+FROM python:3.9
+
+ADD subscriber.py /
+ADD gcp_private_key.json /
+ADD requirements.txt /
+
+RUN pip install --requirement requirements.txt
+
+CMD ["python", "./subscriber.py"]
