@@ -5,6 +5,7 @@ Building batch and streaming data pipelines that extract data from the Twitter A
 
 ## Data
 Twitter API: https://developer.twitter.com/en (Tweets that mention to Shiba Inu coin)
+
 Binance: https://www.binance.com/en (SHIB/USDT and DOGE/USDT)
 
 ## Tool
