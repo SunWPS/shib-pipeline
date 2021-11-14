@@ -12,7 +12,7 @@ credentials = "gcp_private_key.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials
 
 publisher = pubsub_v1.PublisherClient()
-topic_path = "projects/learn-de-331908/topics/tweets"
+topic_path = ""
 
 
 class Stream_tweet(tweepy.Stream):

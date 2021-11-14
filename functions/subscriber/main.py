@@ -9,10 +9,10 @@ ps_credentials = "gcp_private_key.json"
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = ps_credentials
 
 subscriber = pubsub_v1.SubscriberClient()
-subscription_path = "projects/learn-de-331908/subscriptions/tweets-sub"
+subscription_path = ""
 
 client = bigquery.Client()
-table_id = "learn-de-331908.shib.tweets"
+table_id = ""
 
 
 def callback(message):
@@ -22,6 +22,7 @@ def callback(message):
     # load to bigquery
     errors = client.insert_rows_json(table_id, data)
     
+    print("try to loaded")
     
     if errors:
         print("Error while insert rows: " + errors)

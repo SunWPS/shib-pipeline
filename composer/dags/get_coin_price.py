@@ -12,8 +12,8 @@ from airflow.utils.dates import days_ago
 
 
 # binance config
-api_key = "pPnMUhRGd4g2OAgDD1SaWiOcOTDjC6CDQ4vFTYOrkxvgwDEfhBwrwRhfK5OIxymb"
-api_secret = "5YKqA2Zv33gK2ywE2hB2zuUMK9FJJ8wTiGg8d1aB1EKpOc0WMI9K375s4RusiGVZ"
+api_key = ""
+api_secret = ""
 
 
 def get_data_from_binance():
