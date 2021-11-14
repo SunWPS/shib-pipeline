@@ -1,0 +1,1 @@
+## This directory collects files that are used with Cloud Functions.
